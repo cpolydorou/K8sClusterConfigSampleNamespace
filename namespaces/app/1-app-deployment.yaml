@@ -6,7 +6,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: app-deployment
-  namespace: app2
+  namespace: app
 spec:
   selector:
     matchLabels:
@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: cpolydorou/httpdselfsigned:latest
+        image: cpolydorou/httpdselfsigned:20230213
         ports:
         - containerPort: 9000
         resources:
